@@ -37,7 +37,7 @@ $(function () {
 		var url_hash = location.hash;
 		var sectionElem = $(url_hash);
 		if(url_hash.indexOf('#section-') == 0 && sectionElem.length){
-			$('body, html').animate({scrollTop: $(url_hash).offset().top - 72}, 300);
+			$('body, html').animate({scrollTop: $(url_hash).offset().top - 72}, 200);
 		}
 	});
 	
@@ -49,7 +49,7 @@ $(function () {
 				location.href = '/'+link;
 			}
 
-			$('body, html').animate({scrollTop: $(link).offset().top - 110}, 300);
+			$('body, html').animate({scrollTop: $(link).offset().top - 110}, 200);
 			if($('header').hasClass('active')){
 				$('.menu-btn').trigger('click');
 			}
@@ -57,7 +57,7 @@ $(function () {
 			$('body').removeClass('loaded');
 			setTimeout(function() {
 				location.href = "" + link;
-			}, 300);
+			}, 200);
 		}
 		return false;
 	});
@@ -89,7 +89,7 @@ $(function () {
 	$('.section').on('click', '.mouse_btn', function(){
 		$('body,html').animate({
 			scrollTop: height - 150
-		}, 400);
+		}, 200);
 	});
 	
 	$('body').on({
